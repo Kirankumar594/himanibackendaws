@@ -50,7 +50,7 @@ app.use('/api/videos', videoRoutes);
 
 // Redirect all requests to the index.html file
 
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
   return  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
