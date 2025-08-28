@@ -1,6 +1,6 @@
 // Route/BannerRoute.js
 import express from 'express';
-import { createAchievement, getAchievements, deleteAchievement } from '../Controller/achievementController.js';
+import { createAchievement, getAchievements, deleteAchievement } from '../Controller/AchievementController.js';
 import upload from '../Middleware/upload.js';
 
 const router = express.Router();

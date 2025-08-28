@@ -4,17 +4,17 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import galleryRoutes from './Route/gaRoutes.js';
+import galleryRoutes from './Route/GalleryRoutes.js';
 
 // Route imports
-import achievementRoutes from './Route/achievementRoutes.js';
+import achievementRoutes from './Route/AchievementRoutes.js';
 import BannerRoute from './Route/BannerRoute.js';
 import ClientRoute from './Route/ClientRoute.js';
-// import GalleryRoute from './Route/GalleryRoute.js';
+
 import TestimonialRoute from './Route/TestimonialRoute.js';
 import UserEnquiryRoute from './Route/UserEnquiryRoute.js'; 
 import CategoryDetailRoute from './Route/CategoryDetailRoute.js'; 
-import videoRoutes from './Route/videoRoutes.js';
+import videoRoutes from './Route/VideoRoutes.js';
 
 // ES module fix for __dirname
 const __filename = fileURLToPath(import.meta.url);
@@ -50,7 +50,7 @@ app.use('/api/videos', videoRoutes);
 
 // Redirect all requests to the index.html file
 
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
   return  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
