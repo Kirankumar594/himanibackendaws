@@ -4,7 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import galleryRoutes from './Route/GaRoutes.js';
+import galleryRoutes from './Route/gaRoutes.js';
 
 // Route imports
 import achievementRoutes from './Route/achievementRoutes.js';
