@@ -42,8 +42,16 @@ app.use('/api/categorydetails', CategoryDetailRoute);
 app.use('/api/videos', videoRoutes);
 
 // Test route
-app.get('/', (req, res) => {
-  res.send('API is running');
+// app.get('/', (req, res) => {
+//   res.send('API is running');
+// }); 
+ 
+ app.use(express.static(path.join(__dirname, 'build'))); // Change 'build' to your frontend folder if needed
+
+// Redirect all requests to the index.html file
+
+app.get("*", (req, res) => {
+  return  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 // MongoDB connection (cleaned)
